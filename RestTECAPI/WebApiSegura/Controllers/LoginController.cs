@@ -1,0 +1,89 @@
+﻿using System;
+using System.Net;
+using System.Threading;
+using System.Web.Http;
+using Tarea1_API.Models;
+using Tarea1_API.DataBases;
+using System.Collections.Generic;
+
+namespace Tarea1_API.Controllers
+{
+    /// <summary>
+    /// login controller class for authenticate users
+    /// </summary>
+    [AllowAnonymous]
+    [RoutePrefix("api/login")]
+    public class LoginController : ApiController
+    {
+        [HttpGet]
+        [Route("echoping")]
+        public IHttpActionResult EchoPing()
+        {
+            return Ok(true);
+        }
+
+        [HttpGet]
+        [Route("data")]
+        public IHttpActionResult data()
+        {
+            var login = DataBases.JsonController.GetLoginFromJson();
+            List<Usuarios> user = DataBases.JsonController.DeserializeJsonFile(login);
+            return Ok(user[0].Nombre);
+        }
+
+        [HttpGet]
+        [Route("echouser")]
+        public IHttpActionResult EchoUser()
+        {
+            var identity = Thread.CurrentPrincipal.Identity;
+            return Ok($" IPrincipal-user: {identity.Name} - IsAuthenticated: {identity.IsAuthenticated}");
+        }
+
+        [HttpPost]
+        [Route("autenticar")]
+        public IHttpActionResult Authenticate(LoginRequest login)
+        {
+            if (login == null)
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+
+            //TODO: This code is only for demo - extract method in new class & validate correctly in your application !!
+            var isUserValid = (login.Username == "user" && login.Password == "123456");
+            if (isUserValid)
+            {
+                var rolename = "Developer";
+                return Ok(rolename);
+            }
+
+            //TODO: This code is only for demo - extract method in new class & validate correctly in your application !!
+            var isTesterValid = (login.Username == "test" && login.Password == "123456");
+            if (isTesterValid)
+            {
+                var rolename = "Tester";
+                return Ok(rolename);
+            }
+
+            //TODO: This code is only for demo - extract method in new class & validate correctly in your application !!
+            var isAdminValid = (login.Username == "admin" && login.Password == "123456");
+            if (isAdminValid)
+            {
+                var rolename = "Administrator";
+                return Ok(rolename);
+            }
+
+            // Unauthorized access 
+            return Unauthorized();
+        }
+    }
+
+    
+    [RoutePrefix("api/base")]
+    public class LoginController2 : ApiController
+    {
+        [HttpGet]
+        [Route("ver")]
+        public IHttpActionResult EchoPing()
+        {
+            return Ok("Listo ver");
+        }
+    }
+}

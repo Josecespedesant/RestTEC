@@ -1,0 +1,21 @@
+﻿[
+  {
+    "Username": "leo@gmail.com",
+    "Password": "cafe",
+    "Nombre": "Leonardo",
+    "Apellido": "Guillen",
+    "Cedula": 1222222,
+    "Direcciones": [
+      {
+        "Provincia": "Cartago",
+        "Canton": "Central",
+        "Distrito": "Orea"
+      }
+    ],
+    "Fecha_nacimiento": "29/04/2000",
+    "Telefonos": [
+      111222,
+      1111123
+    ]
+  }
+]
