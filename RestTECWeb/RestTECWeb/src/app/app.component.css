@@ -1,0 +1,8 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+body {
+    height: 500px;
+    width: 500px;
+    margin: 50px auto;
+}
+
+

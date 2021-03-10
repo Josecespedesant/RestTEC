@@ -1,0 +1,12 @@
+.form-control.login-user {
+    border: 0 solid #fff !important;
+    
+  }
+
+body {
+    margin: 5px auto;
+}
+
+.form-control{
+  margin: 1% auto;
+}
