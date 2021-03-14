@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
@@ -21,16 +20,39 @@ import { MatSelectModule} from '@angular/material/select';
 import { MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MatButtonToggleModule} from '@angular/material/button-toggle';
 import { LoginComponent } from './login/login.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PlatosComponent } from './platos/platos.component';
+import { MenuComponent } from './menu/menu.component';
+import { TopComponent } from './top/top.component';
+
+const appRoutes: Routes = [
+  { path: 'navbar', component: NavbarComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'platos', component: PlatosComponent },
+  { path: 'menu', component: MenuComponent },
+  { path: 'top', component: TopComponent },
+
+  { path: '',   redirectTo: '/login', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    NavbarComponent,
+    HomeComponent,
+    PageNotFoundComponent,
+    PlatosComponent,
+    MenuComponent,
+    TopComponent,
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
     MatGridListModule,
@@ -47,7 +69,11 @@ import { LoginComponent } from './login/login.component';
     MatRadioModule, 
     MatSelectModule, 
     MatSlideToggleModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

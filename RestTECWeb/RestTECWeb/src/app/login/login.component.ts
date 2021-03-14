@@ -39,7 +39,9 @@ export class LoginComponent implements OnInit {
       this.onIsError();
     }
   }*/
-
+  public onLogin(){
+    
+  }
   onIsError(): void {
     this.isError = true;
     setTimeout(() => {
