@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\source\\repos\\RestTEC Movil App\\RestTEC Movil App\\RestTEC Movil App.csproj": {}
+    "C:\\Users\\PC\\Documents\\GitHub\\RestTEC\\RestTECMobile\\RestTEC Movil App\\RestTEC Movil App\\RestTEC Movil App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\source\\repos\\RestTEC Movil App\\RestTEC Movil App\\RestTEC Movil App.csproj": {
+    "C:\\Users\\PC\\Documents\\GitHub\\RestTEC\\RestTECMobile\\RestTEC Movil App\\RestTEC Movil App\\RestTEC Movil App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\source\\repos\\RestTEC Movil App\\RestTEC Movil App\\RestTEC Movil App.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Documents\\GitHub\\RestTEC\\RestTECMobile\\RestTEC Movil App\\RestTEC Movil App\\RestTEC Movil App.csproj",
         "projectName": "RestTEC Movil App",
-        "projectPath": "C:\\Users\\PC\\source\\repos\\RestTEC Movil App\\RestTEC Movil App\\RestTEC Movil App.csproj",
+        "projectPath": "C:\\Users\\PC\\Documents\\GitHub\\RestTEC\\RestTECMobile\\RestTEC Movil App\\RestTEC Movil App\\RestTEC Movil App.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\source\\repos\\RestTEC Movil App\\RestTEC Movil App\\obj\\",
+        "outputPath": "C:\\Users\\PC\\Documents\\GitHub\\RestTEC\\RestTECMobile\\RestTEC Movil App\\RestTEC Movil App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -44,11 +44,31 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Microsoft.Net.Http": {
+              "target": "Package",
+              "version": "[2.2.29, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "SQLite.Net.Async-PCL": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "SQLite.Net.Core-PCL": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Xam.Plugin.Connectivity": {
+              "target": "Package",
+              "version": "[3.2.0, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
