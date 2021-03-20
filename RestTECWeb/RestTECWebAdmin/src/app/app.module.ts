@@ -26,6 +26,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PlatosComponent } from './platos/platos.component';
 import { MenuComponent } from './menu/menu.component';
 import { TopComponent } from './top/top.component';
+import { HttpClientModule } from '@angular/common/http';
+import { JsonService } from './json.service';
+
 
 const appRoutes: Routes = [
   { path: 'navbar', component: NavbarComponent },
@@ -70,12 +73,13 @@ const appRoutes: Routes = [
     MatSelectModule, 
     MatSlideToggleModule,
     MatButtonToggleModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [],
+  providers: [JsonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
