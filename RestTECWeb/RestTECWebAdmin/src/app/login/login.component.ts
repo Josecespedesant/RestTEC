@@ -1,45 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-//import { AuthService } from 'src/app/services/auth.service';
-//import { UserInterface } from 'src/app/models/user-interface';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
-//import { NgForm } from '@angular/forms/src/directives/ng_form';
+import { NgForm } from '@angular/forms';
+import { JsonService } from "../json.service"
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
+  constructor(public json:JsonService, private router: Router, private location: Location) { 
+    this.json.getJson().subscribe((res:any) => {
 
-  constructor(/*private authService: AuthService,*/ private router: Router, private location: Location) { }
-  /*private user: UserInterface = {
-    email: '',
-    password: ''
-  };*/
-  public isError = false;
-  ngOnInit(): void {
+      console.log(res);
+    }); 
+
   }
+  
+  public isError = false
 
-  /*onLogin(form: NgForm) {
+  public OnInit(){}
+
+  public onLogin(form: NgForm){
     if (form.valid) {
-      return this.authService
-        .loginuser(this.user.email, this.user.password)
-        .subscribe(
-        data => {
-          this.authService.setUser(data.user);
-          const token = data.id;
-          this.authService.setToken(token);
-          this.router.navigate(['/user/profile']);
-          location.reload();
+          console.log(form.value)
+          this.router.navigate(['/home']);
           this.isError = false;
-        },
-        error => this.onIsError()
-        );
     } else {
       this.onIsError();
     }
-  }*/
-  public onLogin(){
     
   }
   onIsError(): void {

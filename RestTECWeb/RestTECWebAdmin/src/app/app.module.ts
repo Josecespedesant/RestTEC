@@ -28,7 +28,7 @@ import { MenuComponent } from './menu/menu.component';
 import { TopComponent } from './top/top.component';
 import { HttpClientModule } from '@angular/common/http';
 import { JsonService } from './json.service';
-
+import { FormsModule }   from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'navbar', component: NavbarComponent },
@@ -74,6 +74,8 @@ const appRoutes: Routes = [
     MatSlideToggleModule,
     MatButtonToggleModule,
     HttpClientModule,
+    FormsModule,
+    
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
