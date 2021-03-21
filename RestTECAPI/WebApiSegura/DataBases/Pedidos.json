@@ -1,1 +1,59 @@
-﻿
+[
+  {
+    "Codigo": 1,
+    "Cliente": "usuario8",
+    "Pedido": [
+      {
+        "Nombre": "Pollo con papas",
+        "Descripcion": "Pollo a la plancha, con papas fritas",
+        "Precio": 2500,
+        "Calorias": 140,
+        "Tipo": "Comida Rapida",
+        "Ventas": 10
+      }
+    ],
+    "Hora_inicio": "2000-04-29T00:00:00",
+    "Hora_final": "2000-04-29T00:00:00",
+    "Estado": "Pendiente",
+    "chef_asignado": " ",
+    "Feedback": 3
+  },
+  {
+    "Codigo": 2,
+    "Cliente": "usuario8",
+    "Pedido": [
+      {
+        "Nombre": "Pollo con papas",
+        "Descripcion": "Pollo a la plancha, con papas fritas",
+        "Precio": 2500,
+        "Calorias": 140,
+        "Tipo": "Comida Rapida",
+        "Ventas": 10
+      }
+    ],
+    "Hora_inicio": "2000-04-29T00:00:00",
+    "Hora_final": "2000-04-29T00:00:00",
+    "Estado": "Pendiente",
+    "chef_asignado": " ",
+    "Feedback": 3
+  },
+  {
+    "Codigo": 4,
+    "Cliente": "usuario8",
+    "Pedido": [
+      {
+        "Nombre": "Pollo con papas",
+        "Descripcion": "Pollo a la plancha, con papas fritas",
+        "Precio": 2500,
+        "Calorias": 140,
+        "Tipo": "Comida Rapida",
+        "Ventas": 10
+      }
+    ],
+    "Hora_inicio": "2000-04-29T00:00:00",
+    "Hora_final": "2000-04-29T00:00:00",
+    "Estado": "Pendiente",
+    "chef_asignado": "chef1 ",
+    "Feedback": 3
+  }
+]

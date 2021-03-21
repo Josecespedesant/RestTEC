@@ -110,10 +110,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
-    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\PlatoController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\PedidosController.cs" />
     <Compile Include="DataBases\JsonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

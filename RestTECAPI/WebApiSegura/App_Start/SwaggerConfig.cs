@@ -19,30 +19,9 @@ namespace Tarea1_API
                 .EnableSwagger(c =>
                 {
                     c.SingleApiVersion("v1", "Tarea1_API");
-                    c.OperationFilter<AuthorizationHeaderParameterOperationFilter>();
                 })
                 .EnableSwaggerUi();
         }
 
-        /// <summary>
-        /// AuthorizationHeaderParameterOperationFilter para introducir JWT en dialogo Swagger
-        /// </summary>
-        public class AuthorizationHeaderParameterOperationFilter : IOperationFilter
-        {
-            public void Apply(Operation operation, SchemaRegistry schemaRegistry, ApiDescription apiDescription)
-            {
-                if (operation.parameters == null)
-                    operation.parameters = new List<Parameter>();
-
-                operation.parameters.Add(new Parameter
-                {
-                    name = "Authorization",
-                    @in = "header",
-                    description = "JWT Token",
-                    required = false,
-                    type = "string"
-                });
-            }
-        }
     }
 }

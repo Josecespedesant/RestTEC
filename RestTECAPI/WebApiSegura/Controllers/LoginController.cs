@@ -15,75 +15,31 @@ namespace Tarea1_API.Controllers
     [RoutePrefix("api/login")]
     public class LoginController : ApiController
     {
-        [HttpGet]
-        [Route("echoping")]
-        public IHttpActionResult EchoPing()
+        //Verifica si el usuario ingresado, username y password coinciden con alguno guradado en el archivo Usuarios.json
+        [HttpPost]
+        [Route("verificar")]
+        public IHttpActionResult Verificar(LoginRequest login)
         {
-            return Ok(true);
-        }
-
-        [HttpGet]
-        [Route("data")]
-        public IHttpActionResult data()
-        {
-            var login = DataBases.JsonController.GetLoginFromJson();
-            List<Usuarios> user = DataBases.JsonController.DeserializeJsonFile(login);
-            return Ok(user[0].Nombre);
-        }
-
-        [HttpGet]
-        [Route("echouser")]
-        public IHttpActionResult EchoUser()
-        {
-            var identity = Thread.CurrentPrincipal.Identity;
-            return Ok($" IPrincipal-user: {identity.Name} - IsAuthenticated: {identity.IsAuthenticated}");
+            DataBases.JsonController.verificacion_login(login);
+            return Ok(DataBases.JsonController.verificacion_login(login));
         }
 
         [HttpPost]
-        [Route("autenticar")]
-        public IHttpActionResult Authenticate(LoginRequest login)
+        [Route("Registrar")]
+        public IHttpActionResult Registrar(Usuarios user)
         {
-            if (login == null)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
-
-            //TODO: This code is only for demo - extract method in new class & validate correctly in your application !!
-            var isUserValid = (login.Username == "user" && login.Password == "123456");
-            if (isUserValid)
-            {
-                var rolename = "Developer";
-                return Ok(rolename);
+            if (user.Username != null && user.Password != null && user.Nombre != null && user.Apellido != null ) {
+                if (user.Username != "" && user.Password != "" && user.Nombre != "" && user.Apellido != "")
+                {
+                    
+                    return Ok(DataBases.JsonController.verificacion_registro(user));
+                }
             }
-
-            //TODO: This code is only for demo - extract method in new class & validate correctly in your application !!
-            var isTesterValid = (login.Username == "test" && login.Password == "123456");
-            if (isTesterValid)
-            {
-                var rolename = "Tester";
-                return Ok(rolename);
-            }
-
-            //TODO: This code is only for demo - extract method in new class & validate correctly in your application !!
-            var isAdminValid = (login.Username == "admin" && login.Password == "123456");
-            if (isAdminValid)
-            {
-                var rolename = "Administrator";
-                return Ok(rolename);
-            }
-
-            // Unauthorized access 
-            return Unauthorized();
+            return Ok("Algun dato esta erroneo");
         }
+
+        
+
     }
 
-    
-    [RoutePrefix("api/base")]
-    public class LoginController2 : ApiController
-    {
-        [HttpGet]
-        [Route("ver")]
-        public IHttpActionResult EchoPing()
-        {
-            return Ok("Listo ver");
-        }
-    }
 }
