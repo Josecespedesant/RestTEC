@@ -1,1 +1,34 @@
-﻿
+[
+  {
+    "Nombre": "Pollo",
+    "Descripcion": "Pollo a la plancha, con papas fritas",
+    "Precio": 2500,
+    "Calorias": 140,
+    "Tipo": "Comida Rapida",
+    "Ventas": 10
+  },
+  {
+    "Nombre": "papas ",
+    "Descripcion": "Arroz con porciones de pollo, maiz y especias ",
+    "Precio": 3500,
+    "Calorias": 90,
+    "Tipo": "Cena",
+    "Ventas": 6
+  },
+  {
+    "Nombre": "Arroz",
+    "Descripcion": "Pollo a la plancha, con papas fritas",
+    "Precio": 2500,
+    "Calorias": 140,
+    "Tipo": "Comida Rapida",
+    "Ventas": 10
+  },
+  {
+    "Nombre": "Pure ",
+    "Descripcion": "Arroz con porciones de pollo, maiz y especias ",
+    "Precio": 3500,
+    "Calorias": 90,
+    "Tipo": "Cena",
+    "Ventas": 6
+  }
+]

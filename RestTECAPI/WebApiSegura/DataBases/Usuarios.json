@@ -1,6 +1,6 @@
-﻿[
+[
   {
-    "Username": "leo@gmail.com",
+    "Username": "usuario",
     "Password": "cafe",
     "Nombre": "Leonardo",
     "Apellido": "Guillen",
@@ -12,10 +12,71 @@
         "Distrito": "Orea"
       }
     ],
-    "Fecha_nacimiento": "29/04/2000",
+    "Fecha_nacimiento": "2000-04-29T00:00:00",
     "Telefonos": [
       111222,
       1111123
-    ]
+    ],
+    "Acceso": "usuario"
+  },
+  {
+    "Username": "admin",
+    "Password": "coco",
+    "Nombre": "Leonardo",
+    "Apellido": "Guillen",
+    "Cedula": 1222222,
+    "Direcciones": [
+      {
+        "Provincia": "Cartago",
+        "Canton": "Central",
+        "Distrito": "Orea"
+      }
+    ],
+    "Fecha_nacimiento": "2000-04-29T00:00:00",
+    "Telefonos": [
+      111222,
+      1111123
+    ],
+    "Acceso": "admin"
+  },
+  {
+    "Username": "chef1",
+    "Password": "12345",
+    "Nombre": "Alberto",
+    "Apellido": "Guzman",
+    "Cedula": 122222233,
+    "Direcciones": [
+      {
+        "Provincia": "Cartago",
+        "Canton": "Central",
+        "Distrito": "Orea"
+      }
+    ],
+    "Fecha_nacimiento": "2000-04-29T00:00:00",
+    "Telefonos": [
+      111222,
+      1111123
+    ],
+    "Acceso": "chef"
+  },
+  {
+    "Username": "chef2",
+    "Password": "12345",
+    "Nombre": "Leonardo",
+    "Apellido": "Guillen",
+    "Cedula": 0,
+    "Direcciones": [
+      {
+        "Provincia": "Cartago",
+        "Canton": "Central",
+        "Distrito": "Orea"
+      }
+    ],
+    "Fecha_nacimiento": "2000-04-29T00:00:00",
+    "Telefonos": [
+      111222,
+      1111123
+    ],
+    "Acceso": "chef"
   }
 ]
