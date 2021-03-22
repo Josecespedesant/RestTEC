@@ -25,8 +25,8 @@ export class LoginComponent {
   public onLogin(form: NgForm){
     if (form.valid) {
           console.log(form.value)
-          this.router.navigate(['/home']);
           this.isError = false;
+          this.router.navigate(['/home']);
     } else {
       this.onIsError();
     }
