@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestTEC Movil App.Android", "RestTEC Movil App.Android\RestTEC Movil App.Android.csproj", "{6DD0FEA8-86A4-477B-B494-60A09EA5876D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestTEC Movil App", "RestTEC Movil App\RestTEC Movil App.csproj", "{347E4F2E-0FFE-45D5-8637-D382A751AFAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DD0FEA8-86A4-477B-B494-60A09EA5876D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DD0FEA8-86A4-477B-B494-60A09EA5876D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DD0FEA8-86A4-477B-B494-60A09EA5876D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6DD0FEA8-86A4-477B-B494-60A09EA5876D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DD0FEA8-86A4-477B-B494-60A09EA5876D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DD0FEA8-86A4-477B-B494-60A09EA5876D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{347E4F2E-0FFE-45D5-8637-D382A751AFAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{347E4F2E-0FFE-45D5-8637-D382A751AFAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{347E4F2E-0FFE-45D5-8637-D382A751AFAD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{347E4F2E-0FFE-45D5-8637-D382A751AFAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{347E4F2E-0FFE-45D5-8637-D382A751AFAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{347E4F2E-0FFE-45D5-8637-D382A751AFAD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B70E9AC2-BA82-4E96-AE7A-90B0737883C9}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RestTEC_Movil_App"
+             x:Class="RestTEC_Movil_App.VentanaMenu">
+
+    <ContentPage.Content>
+        <StackLayout 
+                 BackgroundColor="White"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+            <StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Nombre" TextColor="#1C5AD8" FontSize="Body" Grid.Column="0"/>
+                    <Label Text="Precio" TextColor="#1C5AD8" FontSize="Body" Grid.Column="1"/>
+                    <Label Text="Tipo" TextColor="#1C5AD8" FontSize="Body" Grid.Column="2"/>
+                </Grid>
+                <ListView x:Name="myList" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout VerticalOptions="Fill">
+                                
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                        <Label  x:Name="addToCart"  Text="{Binding Nombre}" TextColor="#1C5AD8" FontSize="Body" Grid.Column="0">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Precio}">
+                                                </TapGestureRecognizer>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                        <Label Text="{Binding Precio}" TextColor="#1C5AD8" FontSize="Body" Grid.Column="1"/>
+                                        <Label Text="{Binding Tipo}" TextColor="#1C5AD8" FontSize="Body" Grid.Column="2"/>
+
+                                    </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>
+            <StackLayout Orientation="Horizontal">
+            <Button Text="Guardar"  BackgroundColor="#76C3D7" TextColor="White" Clicked="OnSave"></Button>
+            <Button Text="Cancelar"  BackgroundColor="Red" TextColor="White" Clicked="OnCancel"></Button>
+        </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
