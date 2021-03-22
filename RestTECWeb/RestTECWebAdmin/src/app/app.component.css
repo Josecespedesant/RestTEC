@@ -2,10 +2,16 @@
 body {
     height: 0px;
     width: 900px auto;
+    
 }
 
 a{
-    margin: 3px auto;
+    margin: 3px;
+}
+.btn{
+    margin: 3px;
 }
 
-
+input{
+    margin: 5px;
+}

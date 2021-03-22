@@ -1,5 +1,103 @@
 <app-navbar></app-navbar>
-<a class="btn btn-success" href="login" role="button" >Nuevo Plato</a>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ModNP">
+  Nuevo Plato
+</button>
+<!-- Modal Nuevo Plato -->
+<div class="modal fade" id="ModNP" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="ModalLabel">Nuevo Plato</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #formPlato="ngForm" (ngSubmit)="onSubmit(formPlato)">
+          <h1 class="h3 mb-3 font-weight-normal" *ngIf="!isError">Detalles</h1>
+          <div class="alert alert-danger" role="alert" *ngIf="isError">
+            Something is wrong!
+          </div>
+          <div class="form-group">
+            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre" ngModel required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="calorias" name="calorias" class="form-control" placeholder="Calorías" ngModel
+              required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="precio" name="precio" class="form-control" placeholder="Precio" ngModel required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="menu" name="menu" class="form-control" placeholder="Menu" ngModel
+              required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="ingredientes" name="ingredientes" class="form-control" placeholder="Ingredientes" ngModel
+              required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="tiempoNecesario" name="tiempoNecesario" class="form-control" placeholder="Tiempo Necesario" ngModel
+              required>
+          </div>
+          <div class="form-group">
+          </div>
+        
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </div></form>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Editar Plato-->
+<div class="modal fade" id="ModEP" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="ModalLabel">Editar Plato</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #formPlato="ngForm" (ngSubmit)="onSubmit(formPlato)">
+          <h1 class="h3 mb-3 font-weight-normal" *ngIf="!isError">Detalles</h1>
+          <div class="alert alert-danger" role="alert" *ngIf="isError">
+            Something is wrong!
+          </div>
+          <div class="form-group">
+            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre" ngModel required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="calorias" name="calorias" class="form-control" placeholder="Calorías" ngModel
+              required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="precio" name="precio" class="form-control" placeholder="Precio" ngModel required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="menu" name="menu" class="form-control" placeholder="Menu" ngModel
+              required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="ingredientes" name="ingredientes" class="form-control" placeholder="Ingredientes" ngModel
+              required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="tiempoNecesario" name="tiempoNecesario" class="form-control" placeholder="Tiempo Necesario" ngModel
+              required>
+          </div>
+          <div class="form-group">
+          </div>
+        
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </div></form>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- List -->
 <div class="accordion accordion-flush" id="accordionFlushExample">
     <div class="accordion-item">
       <h2 class="accordion-header" id="flush-headingOne">
@@ -10,7 +108,9 @@
       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">Placeholder content</div>
         <div>
-        <a class="btn btn-warning" href="#" role="button" >Editar</a>
+          <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ModEP">
+            Editar
+          </button>
       </div>
         <a class="btn btn-danger" href="#" role="button" >Eliminar</a>
       </div>

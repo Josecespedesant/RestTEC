@@ -12,4 +12,7 @@ export class JsonService {
   getJson(){
       return this.http.get(this.url)
   }
+  postJson(obj:any){
+    return this.http.post(this.url,obj);
+}
 }
