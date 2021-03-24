@@ -11,7 +11,7 @@
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <application android:label="RestTEC_Movil_App.Android" android:theme="@style/MainTheme" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true" android:extractNativeLibs="true">
+  <application android:label="RestTEC_Movil_App.Android" android:theme="@style/MainTheme" android:usesCleartextTraffic="true" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true" android:extractNativeLibs="true">
     <activity android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:icon="@mipmap/icon" android:label="RestTEC_Movil_App" android:theme="@style/MainTheme" android:name="crc646a4eacf4d7ad9e42.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

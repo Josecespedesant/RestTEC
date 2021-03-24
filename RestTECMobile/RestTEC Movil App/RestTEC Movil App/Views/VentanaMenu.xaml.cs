@@ -23,7 +23,7 @@ namespace RestTEC_Movil_App
         public int SlidePosition = 0;
         List<ItemSeleccion> listaCompra;
         private HttpClient _client = new HttpClient();
-        private const string Url = "http://192.168.0.14:49220/api/plato/menu";
+        private const string Url = "http://192.168.0.14/Tarea1_API/api/plato/menu";
         public VentanaMenu()
         {
             InitializeComponent();
@@ -35,27 +35,29 @@ namespace RestTEC_Movil_App
 
         protected async void OnGetList()
         {
-            /* if (CrossConnectivity.Current.IsConnected)
+             if (CrossConnectivity.Current.IsConnected)
              {
                  try
                  {
                      var content = await _client.GetStringAsync(Url);
                      var tr = JsonConvert.DeserializeObject<List<Items>>(content);
+                    Console.WriteLine(tr);
                      ObservableCollection<Items> it = new ObservableCollection<Items>(tr);
-                     myList.ItemsSource = it;
+                    Console.WriteLine(it);
+                    myList.ItemsSource = it;
 
                  }catch(Exception ey)
                  {
                      Debug.WriteLine("" + ey);
                  }
-             }*/
-            string jsonstring = @"[{'Nombre': 'Espagueti', 'Descripcion': 'Comida rica', 'Precio': 10000, 'Calorias': 600, 'Tipo': 'Italiana'},
+             }
+          /*  string jsonstring = @"[{'Nombre': 'Espagueti', 'Descripcion': 'Comida rica', 'Precio': 10000, 'Calorias': 600, 'Tipo': 'Italiana'},
 {'Nombre': 'Macarrones', 'Descripcion': 'Comida rica', 'Precio': 200000, 'Calorias': 600, 'Tipo': 'Italiana'},
 {'Nombre': 'Tilapia', 'Descripcion': 'Comida rica', 'Precio': 30009, 'Calorias': 600, 'Tipo': 'Italiana'},
 {'Nombre': 'Hamburguesa', 'Descripcion': 'Comida rica', 'Precio': 213412, 'Calorias': 600, 'Tipo': 'Italiana'},
 {'Nombre': 'Zanahoria con culantro', 'Descripcion': 'Comida rica', 'Precio': 123344, 'Calorias': 600, 'Tipo': 'Italiana'}]";
             var tr = JsonConvert.DeserializeObject<List<Items>>(jsonstring);
-            myList.ItemsSource = tr;
+            myList.ItemsSource = tr;*/
         }
 
         private void OnSave(object sender, EventArgs e)
