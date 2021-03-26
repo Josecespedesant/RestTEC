@@ -3,16 +3,19 @@ using System.Collections.Generic;
 
 namespace Tarea1_API.Models
 {
-    /// <summary>
-    /// Clase Login, donde se maneja la informacion del cliente, usuarios y chefs 
-    /// </summary>
+    /*
+     * En este archivo se obvservan varias clases, el manejo de archivos se realiza mediante estas clases y asi se maneja el json, cada clase contiene atributos
+     * especificos sobre cada entidad
+     */
+
+    //La clase LoginRequest contiene un Username y password 
     public class LoginRequest
     {
         public string Username { get; set; }
         public string Password { get; set; }
     }
 
-
+    //La clase Direccion , tiene la estructura de provincia, canton y distrito
     public class Direccion
     {
         public string Provincia { get; set; }
@@ -20,6 +23,7 @@ namespace Tarea1_API.Models
         public string Distrito { get; set; }
 
     }
+    //La clase Usuario, contiene gran cantidad de atributos los cuales son esenciales para la entidad usuarios
     public class Usuarios
     {
         public string Username { get; set; }
@@ -34,8 +38,9 @@ namespace Tarea1_API.Models
 
 
     }
-    //Manejo de los platos 
-
+    
+    
+    //La clase Platos , contiene atributos de esa entidad y de esa manera se manejaran los pedidos y menu
     public class Platos
     {
         public string Nombre { get; set; }
@@ -47,7 +52,7 @@ namespace Tarea1_API.Models
 
     }
 
-    //Manejo de pedidos 
+    //La clase Pedidos , contiene atributos caracteristicos y contiene otro tipo de clases en su interior para manejar de mejor manera la informacion en el API
     public class Pedidos {
         public int  Codigo { get; set; }
         public string Cliente { get; set; }
