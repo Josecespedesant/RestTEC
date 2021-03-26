@@ -9,6 +9,9 @@ using System.Collections.Generic;
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 namespace Tarea1_API
 {
+    /*
+     * La clase SwaggerConfig , agrega configuracion al API
+     */
     public class SwaggerConfig
     {
         public static void Register()

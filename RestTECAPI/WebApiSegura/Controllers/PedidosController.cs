@@ -6,15 +6,15 @@ using Newtonsoft.Json;
 
 namespace Tarea1_API.Controllers
 {
-    /// <summary>
-    /// customer controller class for testing security token 
-    /// </summary>
-
+    /*La clase PedidosController controla todo lo accesado con el prefijo "api/pedidos" contiene varias respuestas a un http ,devuelve una lista con los pedidos,
+     * agrega, elimina y asigna un pedido en la base de datos 
+     * 
+     */
     [AllowAnonymous]
-    //[Authorize]
     [RoutePrefix("api/pedidos")]
     public class PedidosController : ApiController
     {
+        //Devuleve una lista con los pedidos actuales
         [HttpGet]
         [Route("listapedidos")]
         public IHttpActionResult lista() {
@@ -23,6 +23,7 @@ namespace Tarea1_API.Controllers
             return Ok(DataBases.JsonController.DeserializeJsonFilePedidos(DataBases.JsonController.GetPedidosFromJson()));
         }
 
+        //Agrega un pedido a la lista principal de pedidos , recibe un objeto de tipo Pedidos 
         [HttpPost]
         [Route("agregar")]
         public IHttpActionResult Agregar(Pedidos pedido)
@@ -44,6 +45,7 @@ namespace Tarea1_API.Controllers
             return Ok("Pedido Agregado");
         }
 
+        //Elimina un pedido de la base de datos , recibe un objeto de tipo Pedidos 
         [HttpPost]
         [Route("eliminar")]
         public IHttpActionResult Borrar(Pedidos pedido)
@@ -66,7 +68,8 @@ namespace Tarea1_API.Controllers
 
             return Ok("Codigo de pedido no encontrado");
         }
-        //Enviar solo codigo y chef
+
+        //Asigna un pedido existente a un chef , recibe un objeto de tipo Pedidos 
         [HttpPost]
         [Route("asignar")]
         public IHttpActionResult Asignar(Pedidos pedido)

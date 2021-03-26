@@ -9,11 +9,21 @@ using Tarea1_API.Models;
 
 namespace Tarea1_API.DataBases
 {
+    /*La Clase JsonController tiene como funcion manejar la informacion guardada en los json, tiene acceso a 3 archivos json que contienen bases de datos de diferentes 
+     * tipos , y cada uno tiene 3 funciones especificas en esta clase , una pasa el archivo a un string , otro  pasa de string a una lista de la clase deseada 
+     * y finalmente de una lista de la clase deseada se guarda sobreescrbiendo el archivo original
+     * Tambien contiene la funcion de verificar el login y el registrarse
+     * 
+     */
     public class JsonController
     {
+        /*
+         * URL del archivo donde se guardara cada tipo de datos
+         */
         private static string path_usuario = @"C:\Users\PC\Documents\GitHub\RestTEC\RestTECAPI\WebApiSegura\DataBases\Usuarios.json";
         private static string path_plato = @"C:\Users\PC\Documents\GitHub\RestTEC\RestTECAPI\WebApiSegura\DataBases\Plato.json";
         private static string path_pedidos = @"C:\Users\PC\Documents\GitHub\RestTEC\RestTECAPI\WebApiSegura\DataBases\Pedidos.json";
+       
         // (Login) Pasa el archivo a un string 
         public static string GetLoginFromJson()
         {
@@ -26,6 +36,7 @@ namespace Tarea1_API.DataBases
             }
             return loginFromJson;
         }
+
         //(Login) Guarda la informacion en los json
         public static void SerializeJsonFileLogin(List<Usuarios> loginS)
         {
@@ -38,7 +49,7 @@ namespace Tarea1_API.DataBases
         public static List<Usuarios> DeserializeJsonFileLogin(string logionFromJson)
         {
             List<Usuarios> product = JsonConvert.DeserializeObject<List<Usuarios>>(logionFromJson);
-            //Console.WriteLine(product.Nombre);
+           
             return product;
         }
 
@@ -123,12 +134,12 @@ namespace Tarea1_API.DataBases
             {
                 if (user.Username == user_data[i].Username || user.Cedula == user_data[i].Cedula)
                 {
-                    //error 
+                    
                     return "El nombre de usuario o el numero de cedula, ya estan ingresado";
                 }
                 i++;
             }
-            //agrega al json
+            
             user_data.Add(user);
             SerializeJsonFileLogin(user_data);
             return "Todo listo";

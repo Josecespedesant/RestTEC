@@ -8,13 +8,12 @@ using Tarea1_API.Models;
 
 namespace Tarea1_API.Controllers
 {
-    /// <summary>
-    /// admin controller class for testing security token with role admin
-    /// </summary>
-    /// 
+    /*La clase PlatoController controla todo lo accesado con el prefijo "api/plato" contiene varias respuestas a un http , devuelve el menu ,agrega un plato a la 
+     * base de datos de los platos, tambien edita y elimina por medio de un post recibiendo un json con el formato plato 
+     * 
+     */
 
     [AllowAnonymous]
-    //[Authorize(Roles = "Administrator")]
     [RoutePrefix("api/plato")]
     public class PlatoController : ApiController
     {
@@ -27,6 +26,7 @@ namespace Tarea1_API.Controllers
             return Ok(DataBases.JsonController.DeserializeJsonFilePlatos(DataBases.JsonController.GetPlatosFromJson()));
         }
 
+        //Agrega un plato a la base de datos , recibe un elemento de la clase plato 
         [HttpPost]
         [Route("agregar")]
         public IHttpActionResult Agregar(Platos plato)
@@ -49,6 +49,7 @@ namespace Tarea1_API.Controllers
             return Ok("Platillo Agregado");
         }
 
+        //Elimina un plato de la base de datos , recibe un elemento de la clase plato 
         [HttpPost]
         [Route("eliminar")]
         public IHttpActionResult Borrar(Platos plato)
@@ -71,7 +72,7 @@ namespace Tarea1_API.Controllers
             return Ok("Platillo no se ha encontrado");
         }
 
-
+        //Edita un plato guardado en la base de datos , recibe un elemento de la clase plato 
         [HttpPost]
         [Route("editar")]
         public IHttpActionResult Editar(Platos plato) 

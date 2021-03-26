@@ -8,14 +8,15 @@ using System.Collections.Generic;
 
 namespace Tarea1_API.Controllers
 {
-    /// <summary>
-    /// login controller class for authenticate users
-    /// </summary>
+    /*La clase LoginController controla todo lo accesado con el prefijo "api/login" contiene varias respuestas a un http ,verifica el login ingresado para ver si esta
+     * en los datos guardados , y revisa el registro nuevo para confirmar de que no habia sido ingresado antes.
+     * 
+     */
     [AllowAnonymous]
     [RoutePrefix("api/login")]
     public class LoginController : ApiController
     {
-        //Verifica si el usuario ingresado, username y password coinciden con alguno guradado en el archivo Usuarios.json
+        //Verifica si el usuario ingresado, username y password coinciden con alguno guradado en el archivo Usuarios.json , recibiendo un objeto tipo Usuarios
         [HttpPost]
         [Route("verificar")]
         public IHttpActionResult Verificar(LoginRequest login)
@@ -24,6 +25,7 @@ namespace Tarea1_API.Controllers
             return Ok(DataBases.JsonController.verificacion_login(login));
         }
 
+        //Agrega un nuevo cliente , chef o admin a la base de datos , recibiendo un objeto tipo Usuarios
         [HttpPost]
         [Route("Registrar")]
         public IHttpActionResult Registrar(Usuarios user)
