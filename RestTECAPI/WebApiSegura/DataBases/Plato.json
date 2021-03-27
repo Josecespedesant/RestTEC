@@ -1,34 +1,92 @@
 [
   {
-    "Nombre": "Pollo",
+    "Nombre": "Pollo con papas a la francesa",
     "Descripcion": "Pollo a la plancha, con papas fritas",
     "Precio": 2500,
     "Calorias": 140,
     "Tipo": "Comida Rapida",
-    "Ventas": 10
+    "Ventas": 10,
+    "Feedback": 5
   },
   {
-    "Nombre": "papas ",
-    "Descripcion": "Arroz con porciones de pollo, maiz y especias ",
-    "Precio": 3500,
+    "Nombre": "Papas con carne ",
+    "Descripcion": "Papas fritas con carne , queso derretido y salsas ",
+    "Precio": 3000,
     "Calorias": 90,
-    "Tipo": "Cena",
-    "Ventas": 6
-  },
-  {
-    "Nombre": "Arroz",
-    "Descripcion": "Pollo a la plancha, con papas fritas",
-    "Precio": 2500,
-    "Calorias": 140,
     "Tipo": "Comida Rapida",
-    "Ventas": 10
+    "Ventas": 6,
+    "Feedback": 5
   },
   {
-    "Nombre": "Pure ",
-    "Descripcion": "Arroz con porciones de pollo, maiz y especias ",
+    "Nombre": "Arroz con pollo",
+    "Descripcion": "Pollo en rebanadas revuelta con arroz y verduras ",
+    "Precio": 3500,
+    "Calorias": 140,
+    "Tipo": "Plato Fuerte",
+    "Ventas": 20,
+    "Feedback": 4
+  },
+  {
+    "Nombre": "Casado con pescado",
+    "Descripcion": "Arroz , frijoles , ensalada y pescado emparnizado",
     "Precio": 3500,
     "Calorias": 90,
-    "Tipo": "Cena",
-    "Ventas": 6
+    "Tipo": "Plato Fuerte",
+    "Ventas": 7,
+    "Feedback": 3
+  },
+  {
+    "Nombre": "Chifrijo",
+    "Descripcion": "Arroz , frijoles , carne de cerdo y tortillitas",
+    "Precio": 3500,
+    "Calorias": 300,
+    "Tipo": "Plato Fuerte",
+    "Ventas": 8,
+    "Feedback": 4
+  },
+  {
+    "Nombre": "Fajitas de Pollo",
+    "Descripcion": "Pollo en fajitas emparnizado",
+    "Precio": 2000,
+    "Calorias": 200,
+    "Tipo": "Comida Rapida",
+    "Ventas": 24,
+    "Feedback": 5
+  },
+  {
+    "Nombre": "Gallo Pinto ",
+    "Descripcion": "Arroz , frijoles , ensalada ,natilla y salchichon",
+    "Precio": 4500,
+    "Calorias": 320,
+    "Tipo": "Plato Fuerte",
+    "Ventas": 26,
+    "Feedback": 5
+  },
+  {
+    "Nombre": "Hamburguesa Con papas",
+    "Descripcion": "Hamburguesa de carne y papas fritas",
+    "Precio": 2500,
+    "Calorias": 290,
+    "Tipo": "Comida Rapida",
+    "Ventas": 23,
+    "Feedback": 3
+  },
+  {
+    "Nombre": "Hamburguesa Vegetariana Con papas",
+    "Descripcion": "Hamburguesa de torta vegetariana  y papas fritas",
+    "Precio": 2500,
+    "Calorias": 290,
+    "Tipo": "Comida Rapida",
+    "Ventas": 5,
+    "Feedback": 4
+  },
+  {
+    "Nombre": "Sopa de Verduras",
+    "Descripcion": "Caldo con verduras y fideos",
+    "Precio": 2500,
+    "Calorias": 290,
+    "Tipo": "Comida Rapida",
+    "Ventas": 17,
+    "Feedback": 3
   }
 ]

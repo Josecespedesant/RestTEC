@@ -89,5 +89,26 @@ namespace Tarea1_API.Controllers
 
             return Ok("Codigo de pedido no encontrado");
         }
+
+        //Enviar pedidos asignados al chef 
+        [HttpPost]
+        [Route("asignado")]
+        public IHttpActionResult Asignado(LoginRequest chef)
+        {
+            List<Pedidos> pedidos_base = DataBases.JsonController.DeserializeJsonFilePedidos(DataBases.JsonController.GetPedidosFromJson());
+            List<Pedidos> pedidos_base2 = new List<Pedidos> { };
+            int i = 0;
+            while (i < pedidos_base.Count)
+            {
+                if (chef.Username == pedidos_base[i].chef_asignado)
+                {
+                    pedidos_base2.Add(pedidos_base[i]);
+
+                }
+                i++;
+            }
+
+            return Ok(pedidos_base2);
+        }
     }
 }

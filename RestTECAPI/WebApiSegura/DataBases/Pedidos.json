@@ -9,7 +9,8 @@
         "Precio": 2500,
         "Calorias": 140,
         "Tipo": "Comida Rapida",
-        "Ventas": 10
+        "Ventas": 10,
+        "Feedback": 3
       }
     ],
     "Hora_inicio": "2000-04-29T00:00:00",
@@ -28,13 +29,14 @@
         "Precio": 2500,
         "Calorias": 140,
         "Tipo": "Comida Rapida",
-        "Ventas": 10
+        "Ventas": 10,
+        "Feedback": 3
       }
     ],
     "Hora_inicio": "2000-04-29T00:00:00",
     "Hora_final": "2000-04-29T00:00:00",
     "Estado": "Pendiente",
-    "chef_asignado": " ",
+    "chef_asignado": "chef1",
     "Feedback": 3
   },
   {
@@ -47,13 +49,14 @@
         "Precio": 2500,
         "Calorias": 140,
         "Tipo": "Comida Rapida",
-        "Ventas": 10
+        "Ventas": 10,
+        "Feedback": 3
       }
     ],
     "Hora_inicio": "2000-04-29T00:00:00",
     "Hora_final": "2000-04-29T00:00:00",
     "Estado": "Pendiente",
-    "chef_asignado": "chef1 ",
+    "chef_asignado": "chef1",
     "Feedback": 3
   }
 ]
