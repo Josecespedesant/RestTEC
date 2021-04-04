@@ -15,7 +15,10 @@ using Xamarin.Forms.Xaml;
 
 namespace RestTEC_Movil_App
 {
-   
+    /*
+     *Clase VentanaMenu
+     *Clase encargada de la vista del menú.
+     */
     public partial class VentanaMenu : ContentPage
     {
         public int Count = 0;
@@ -24,6 +27,10 @@ namespace RestTEC_Movil_App
         List<ItemSeleccion> listaCompra;
         private HttpClient _client = new HttpClient();
         private const string Url = "http://192.168.0.14/Tarea1_API/api/plato/menu";
+        /*
+        *Clase VentanaMenu
+        *Clase encargada de la vista del carrito de compras.
+        */
         public VentanaMenu()
         {
             InitializeComponent();
@@ -31,8 +38,9 @@ namespace RestTEC_Movil_App
             BindingContext = new Items();
             OnGetList();
         }
-
-
+        /*
+         * Actualiza la lista que se despliega.
+         */
         protected async void OnGetList()
         {
              if (CrossConnectivity.Current.IsConnected)
@@ -51,15 +59,10 @@ namespace RestTEC_Movil_App
                      Debug.WriteLine("" + ey);
                  }
              }
-          /*  string jsonstring = @"[{'Nombre': 'Espagueti', 'Descripcion': 'Comida rica', 'Precio': 10000, 'Calorias': 600, 'Tipo': 'Italiana'},
-{'Nombre': 'Macarrones', 'Descripcion': 'Comida rica', 'Precio': 200000, 'Calorias': 600, 'Tipo': 'Italiana'},
-{'Nombre': 'Tilapia', 'Descripcion': 'Comida rica', 'Precio': 30009, 'Calorias': 600, 'Tipo': 'Italiana'},
-{'Nombre': 'Hamburguesa', 'Descripcion': 'Comida rica', 'Precio': 213412, 'Calorias': 600, 'Tipo': 'Italiana'},
-{'Nombre': 'Zanahoria con culantro', 'Descripcion': 'Comida rica', 'Precio': 123344, 'Calorias': 600, 'Tipo': 'Italiana'}]";
-            var tr = JsonConvert.DeserializeObject<List<Items>>(jsonstring);
-            myList.ItemsSource = tr;*/
         }
-
+        /*
+         * Guarda los items seleccionados del menú y los manda al carrito.
+         */
         private void OnSave(object sender, EventArgs e)
         {
             Navigation.PushAsync(new VentanaCarrito(listaCompra));
@@ -69,7 +72,9 @@ namespace RestTEC_Movil_App
         {
 
         }
-
+        /*
+         * Agrega el item al carrito.
+         */
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             //ItemSeleccion objeto de ayuda

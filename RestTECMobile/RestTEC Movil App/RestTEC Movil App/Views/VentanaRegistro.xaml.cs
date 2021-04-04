@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,15 +12,24 @@ using Xamarin.Forms.Xaml;
 namespace RestTEC_Movil_App
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+    /*
+    *Clase VentanaRegistro
+    *Clase encargada de la vista del registro.
+    */
     public partial class VentanaRegistro : ContentPage
     {
+        /*
+         * Constructor de la ventana registro.
+         */
         public VentanaRegistro()
         {
             InitializeComponent();
             botonconfirmar.Clicked += Botonconfirmar_Clicked;
         }
-
-        private void Botonconfirmar_Clicked(object sender, EventArgs e)
+        /*
+         * Confirma los datos del registro del cliente.
+         */
+        private async void Botonconfirmar_Clicked(object sender, EventArgs e)
         {
             string ced = cedula.Text;
             string name = nombre.Text;
@@ -49,34 +59,33 @@ namespace RestTEC_Movil_App
                     DisplayAlert("Error", "Correo no válido.", "OK");
                 });
             }
-            //Se genera un array de para crear el Json
-            JArray array = new JArray();
-            //Se crea cada uno de los elementos del array
-            JValue jced = new JValue(ced);
-            JValue jname = new JValue(name);
-            JValue jape1 = new JValue(ape1);
-            JValue jape2 = new JValue(ape2);
-            JValue jprov = new JValue(prov);
-            JValue jcant = new JValue(cant);
-            JValue jdistr = new JValue(distr);
-            JValue jdt = new JValue(dt);
-            JValue jnum = new JValue(num);
-            JValue jcorre = new JValue(corre);
-            JValue jpass = new JValue(pass);
 
-            array.Add(jced);
-            array.Add(jname);
-            array.Add(jape1);
-            array.Add(jape2);
-            array.Add(jprov);
-            array.Add(jcant);
-            array.Add(jdistr);
-            array.Add(jdt);
-            array.Add(jnum);
-            array.Add(jcorre);
-            array.Add(jpass);
+            string direccion = "{" + "\"Provincia\"" + ": " + "\""+ prov + "\"" + "," + "\n" + "{" + "\"Provincia\"" + ": " + "\"" + prov + "\"" + "," + "\n" + "\"Canton\"" + ": " + "\"" + cant + "\"" + "," + "\n"
+               + "{" + "\"Distrito\"" + ": " + "\"" + distr + "\"";
 
-            Console.Write(array.ToString());
+            string phone = "[" + num + "]";
+
+            var values = new Dictionary<string, string>
+            {
+                { "Username" , corre},
+                { "Password", pass },
+                { "Nombre" , name},
+                { "Apellido", ape1 },
+                { "Cedula", ced},
+                { "Direcciones", direccion},
+                { "Fecha_nacimiento", dt.ToString()},
+                { "Telefonos", phone},
+                { "Acceso", "usuario"}
+            };
+
+            HttpClient client = new HttpClient();
+            var content = new FormUrlEncodedContent(values);
+            var response = await client.PostAsync("http://192.168.0.14/Tarea1_API/api/login/Registrar", content);
+            var contents = await response.Content.ReadAsStringAsync();
+            if (contents == "\"Todo listo\"")
+            {
+                await Navigation.PushAsync(new VentanaPrincipal());
+            }
 
         }
     }

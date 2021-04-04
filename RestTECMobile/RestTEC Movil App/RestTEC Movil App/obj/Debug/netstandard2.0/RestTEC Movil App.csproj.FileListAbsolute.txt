@@ -17,7 +17,6 @@ C:\Users\PC\Documents\GitHub\RestTEC\RestTECMobile\RestTEC Movil App\RestTEC Mov
 C:\Users\PC\Documents\GitHub\RestTEC\RestTECMobile\RestTEC Movil App\RestTEC Movil App\bin\Debug\netstandard2.0\RestTEC Movil App.dll
 C:\Users\PC\Documents\GitHub\RestTEC\RestTECMobile\RestTEC Movil App\RestTEC Movil App\bin\Debug\netstandard2.0\ref\RestTEC Movil App.dll
 C:\Users\PC\Documents\GitHub\RestTEC\RestTECMobile\RestTEC Movil App\RestTEC Movil App\bin\Debug\netstandard2.0\RestTEC Movil App.pdb
-C:\Users\PC\Documents\GitHub\RestTEC\RestTECMobile\RestTEC Movil App\RestTEC Movil App\obj\Debug\netstandard2.0\RestTEC Movil App.csprojAssemblyReference.cache
 C:\Users\PC\Documents\GitHub\RestTEC\RestTECMobile\RestTEC Movil App\RestTEC Movil App\obj\Debug\netstandard2.0\Views\App.xaml.g.cs
 C:\Users\PC\Documents\GitHub\RestTEC\RestTECMobile\RestTEC Movil App\RestTEC Movil App\obj\Debug\netstandard2.0\Views\VentanaCarrito.xaml.g.cs
 C:\Users\PC\Documents\GitHub\RestTEC\RestTECMobile\RestTEC Movil App\RestTEC Movil App\obj\Debug\netstandard2.0\Views\VentanaMenu.xaml.g.cs
@@ -30,3 +29,4 @@ C:\Users\PC\Documents\GitHub\RestTEC\RestTECMobile\RestTEC Movil App\RestTEC Mov
 C:\Users\PC\Documents\GitHub\RestTEC\RestTECMobile\RestTEC Movil App\RestTEC Movil App\obj\Debug\netstandard2.0\RestTEC Movil App.dll
 C:\Users\PC\Documents\GitHub\RestTEC\RestTECMobile\RestTEC Movil App\RestTEC Movil App\obj\Debug\netstandard2.0\ref\RestTEC Movil App.dll
 C:\Users\PC\Documents\GitHub\RestTEC\RestTECMobile\RestTEC Movil App\RestTEC Movil App\obj\Debug\netstandard2.0\RestTEC Movil App.pdb
+C:\Users\PC\Documents\GitHub\RestTEC\RestTECMobile\RestTEC Movil App\RestTEC Movil App\obj\Debug\netstandard2.0\RestTEC Movil App.csprojAssemblyReference.cache
