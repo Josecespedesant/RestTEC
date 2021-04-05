@@ -11,27 +11,29 @@ import { JsonService } from "../json.service"
 })
 export class LoginComponent {
   constructor(public json:JsonService, private router: Router, private location: Location) { 
-    this.json.getJson().subscribe((res:any) => {
-
-      console.log(res);
-    }); 
-
   }
   
   public isError = false
 
   public OnInit(){}
-
+//metodo onLogin verifica si el form del html es valida, envia el username y password al metodo post y espera respuesta del API
   public onLogin(form: NgForm){
     if (form.valid) {
-          console.log(form.value)
-          this.isError = false;
+      this.json.postJson(1,form.value).subscribe((res:any) => {
+        console.log(res);
+        if(res=="Ok"){
           this.router.navigate(['/home']);
+          this.isError = false;
+        }else{
+          this.isError = true;
+        }
+      }); 
+          console.log(form.value)     
     } else {
       this.onIsError();
     }
-    
   }
+  //metodo onIsError si la form no es valida presenta un component que indica error
   onIsError(): void {
     this.isError = true;
     setTimeout(() => {

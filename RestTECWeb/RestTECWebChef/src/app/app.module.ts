@@ -29,8 +29,9 @@ import { ReasignarComponent } from './reasignar/reasignar.component';
 import { JsonService } from './json.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule }   from '@angular/forms';
-
+//Definicion de los URLS para navegar en la Web
 const appRoutes: Routes = [
+  //Definicion de los URLS para navegar en la Web
   { path: 'navbar', component: NavbarComponent },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },

@@ -97,148 +97,53 @@
     </div>
   </div>
 </div>
+
 <!-- List -->
-<div class="accordion accordion-flush" id="accordionFlushExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingOne">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          Plato #1
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item" *ngFor="let plato1 of platos">
+      <h1 class="accordion-header" id="heading">
+        <button class="accordion-button collapsed" >
+          <b>{{plato1.Nombre}}</b>
         </button>
-        </h2>
-      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content</div>
+        </h1>
+      <div id="collapse" class="accordion-collapse active" aria-labelledby="heading" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Descripción</div>
+                {{plato1.Descripcion}}
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Tipo</div>
+                {{plato1.Tipo}}
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Calorías</div>
+                {{plato1.Calorias}}
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Precio</div>
+                ₡{{plato1.Precio}}
+              </div>
+            </li>
+          </ol>
+        </div>
         <div>
           <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ModEP">
             Editar
           </button>
       </div>
-        <a class="btn btn-danger" href="#" role="button" >Eliminar</a>
+        <a class="btn btn-danger" role="button" >Eliminar</a>
       </div>
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-          Plato #2
-        </button>
-      </h2>
-      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content</div>
-        <div>
-        <a class="btn btn-warning" href="#" role="button" >Editar</a>
-      </div>
-        <a class="btn btn-danger" href="#" role="button" >Eliminar</a>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-          Plato #3
-        </button>
-      </h2>
-      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content</div>
-        <div>
-        <a class="btn btn-warning" href="#" role="button" >Editar</a>
-      </div>
-        <a class="btn btn-danger" href="#" role="button" >Eliminar</a>
-      </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-            Plato #4
-          </button>
-        </h2>
-        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content</div>
-          <div>
-        <a class="btn btn-warning" href="#" role="button" >Editar</a>
-      </div>
-        <a class="btn btn-danger" href="#" role="button" >Eliminar</a>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingFive">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-            Plato #5
-          </button>
-        </h2>
-        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content</div>
-          <div>
-        <a class="btn btn-warning" href="#" role="button" >Editar</a>
-      </div>
-        <a class="btn btn-danger" href="#" role="button" >Eliminar</a>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingSix">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-            Plato #6
-          </button>
-        </h2>
-        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content</div>
-          <div>
-        <a class="btn btn-warning" href="#" role="button" >Editar</a>
-      </div>
-        <a class="btn btn-danger" href="#" role="button" >Eliminar</a>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingSeven">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
-            Plato #7
-          </button>
-        </h2>
-        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content</div>
-          <div>
-        <a class="btn btn-warning" href="#" role="button" >Editar</a>
-      </div>
-        <a class="btn btn-danger" href="#" role="button" >Eliminar</a>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingEight">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
-            Plato #8
-          </button>
-        </h2>
-        <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content</div>
-          <div>
-        <a class="btn btn-warning" href="#" role="button" >Editar</a>
-      </div>
-        <a class="btn btn-danger" href="#" role="button" >Eliminar</a>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingNine">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
-            Plato #9
-          </button>
-        </h2>
-        <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content</div>
-          <div>
-        <a class="btn btn-warning" href="#" role="button" >Editar</a>
-      </div>
-        <a class="btn btn-danger" href="#" role="button" >Eliminar</a>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingTen">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
-            Plato #10
-          </button>
-        </h2>
-        <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content</div>
-          <div>
-        <a class="btn btn-warning" href="#" role="button" >Editar</a>
-      </div>
-        <a class="btn btn-danger" href="#" role="button" >Eliminar</a>
-        </div>
-      </div>
   </div>
+
+  

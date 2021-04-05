@@ -15,18 +15,22 @@
               Top 10
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="top">Platos más vendidos</a></li>
-              <li><a class="dropdown-item" href="top">Platos más ganancias</a></li>
-              <li><a class="dropdown-item" href="top">Platos mejor feedback</a></li>
+              <li><button class="dropdown-item" (click)="top1()">
+                Platos más vendidos</button></li>
+              <li><button class="dropdown-item" (click)="top2()">
+                Platos más ganancias</button></li>
+              <li><button class="dropdown-item" (click)="top3()">
+                Platos mejor feedback</button></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="top">Clientes con más órdenes</a></li>
+              <li><button class="dropdown-item" (click)="top4()">
+                Clientes con más órdenes</button></li>
             </ul>
           </li>
-          
         </ul>
         <form class="d-flex">
           <a class="btn btn-outline-success" href="login" role="button" >Log Out</a>
         </form>
+        
       </div>
     </div>
   </nav>

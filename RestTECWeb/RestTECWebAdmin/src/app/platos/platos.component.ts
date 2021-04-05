@@ -5,16 +5,25 @@ import { Location } from '@angular/common';
 import { NgForm } from '@angular/forms';
 import { JsonService } from "../json.service"
 
+
 @Component({
   selector: 'app-platos',
   templateUrl: './platos.component.html',
   styleUrls: ['./platos.component.css']
 })
 export class PlatosComponent {
+  //el contructor de platos utilizado para pedir la lista de platos guardarla en una variable y si presentarlo en la interfaz
   public isError = false
-  constructor(public json:JsonService, private router: Router, private location: Location) { }
+  platos : Array<any>= [];
+  constructor(public json:JsonService, private router: Router, private location: Location) {
+    this.json.getJson(1).subscribe((res:any) => {
+      console.log(res);
+      this.platos=res;
+    }); 
+   }
 
   OnInit(): void {
+
   }
 
   public onSubmit(form: NgForm){
@@ -25,8 +34,9 @@ export class PlatosComponent {
     } else {
       this.onIsError();
     }
-    
   }
+  
+  
   onIsError(): void {
     this.isError = true;
     setTimeout(() => {
@@ -36,3 +46,4 @@ export class PlatosComponent {
 
 
 }
+
